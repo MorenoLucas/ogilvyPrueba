@@ -19,7 +19,7 @@ img :nth-child(2) {
   font-weight: 500;
 }
 .row p {
-  margin: 0 1em 0.5em 1em;
+  margin: 0.3em 1em 0.5em 1em;
   font-weight: 100;
   font-size: 0.75em;
 }
@@ -90,4 +90,29 @@ img :nth-child(2) {
 .terminos button {
   color: rgb(54, 152, 209);
   padding: 0.5em 1em;
+}
+
+/* Móviles de 576px o menos */
+@media (max-width: 768.98px) {
+  .formulario {
+    width: auto;
+  }
+  .dPersonales {
+    display: flex;
+    flex-direction: column;
+  }
+  .datos {
+    display: flex;
+    flex-direction: column;
+  }
+  .cons {
+    display: flex;
+    flex-direction: column;
+  }
+  .terminos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

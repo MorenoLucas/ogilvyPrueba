@@ -3,3 +3,6 @@ html {
   font-family: "Helvetica";
   letter-spacing: 0.07em;
 }
+body {
+  box-sizing: border-box;
+}
