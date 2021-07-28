@@ -1,6 +1,6 @@
 <header>
   <img src="../../../assets/logo-vw-comerciales.jpg" alt="Logo VW" />
-  <img src="../../../assets/logo-vw-comerciales.jpg" alt="Banner Vw" />
+  <img src="../../../assets/header_multivan.jpg" alt="Banner Vw" />
 </header>
 <main>
   <div class="container">
@@ -14,43 +14,63 @@
       </p>
     </div>
     <div class="formulario">
-      <h3>¿Qué modelo quieres probar?</h3>
+      <h3 class="titulo">¿Qué modelo quieres probar?</h3>
       <form action="">
         <label for="">Modelo Principal* </label
         ><select>
           <option>Multivan</option>
           <option>Caravelle</option>
         </select>
-        <h3>¿Tus datos de contacto son?</h3>
+        <h3 class="titulo">¿Tus datos de contacto son?</h3>
         <label for="">Trato* </label
         ><select>
           <option>Sr</option>
           <option>Sra</option>
         </select>
-        <label for="">Nombre* </label>
-        <input type="text" name="nombre" />
-        <label for=""> 1er Apellido* </label>
-        <input type="text" name="apellido" />
-        <label for=""> 2do Apellido </label>
-        <input type="text" name="apellido2" />
-        <label for="">E-mail* </label>
-        <input type="email" name="email" />
-        <label for="">Movil* </label>
-        <input type="text" name="telefono" />
-        <h3>Escoge tu concesionario</h3>
-        <label for="">Provincia* </label>
-        <select>
-          <option>Almería</option>
-        </select>
-        <label for="">Concesión* </label>
-
-        <select>
-          <option>A1</option>
-        </select>
-
-        <input type="checkbox" value="Enviar" />
-        <label for="">He leido y aceotadi la Política de Privacidad</label>
-        <button>Enviar</button>
+        <div class="dPersonales">
+          <div class="nombre">
+            <label for="">Nombre* </label>
+            <input type="text" name="nombre" />
+          </div>
+          <div class="apeOne">
+            <label for=""> 1er Apellido* </label>
+            <input type="text" name="apellido" />
+          </div>
+          <div class="apeTwo">
+            <label for=""> 2do Apellido </label>
+            <input type="text" name="apellido2" />
+          </div>
+        </div>
+        <div class="datos">
+          <div class="email">
+            <label for="">E-mail* </label>
+            <input type="email" name="email" />
+          </div>
+          <div class="movil">
+            <label for="">Movil* </label>
+            <input type="text" name="telefono" />
+          </div>
+        </div>
+        <h3 class="titulo">Escoge tu concesionario</h3>
+        <div class="concesionario">
+          <div class="prov">
+            <label for="">Provincia* </label>
+            <select>
+              <option>Almería</option>
+            </select>
+          </div>
+          <div class="cons">
+            <label for="">Concesión* </label>
+            <select>
+              <option>A1</option>
+            </select>
+          </div>
+        </div>
+        <div class="terminos">
+          <input type="checkbox" value="Enviar" />
+          <label for="">He leido y aceotadi la Política de Privacidad</label>
+          <button>Enviar</button>
+        </div>
       </form>
     </div>
   </div>

@@ -1,0 +1,93 @@
+header {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin-bottom: 0.5em;
+}
+img :nth-child(2) {
+  width: 100vw;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+}
+.row {
+  border-bottom: 1px solid #e0e0e0;
+}
+.row h3 {
+  margin: 1em 1em 0em 1em;
+  font-weight: 500;
+}
+.row p {
+  margin: 0 1em 0.5em 1em;
+  font-weight: 100;
+  font-size: 0.75em;
+}
+.formulario {
+  padding: 1em 2em;
+  background-color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.titulo {
+  color: rgb(54, 152, 209);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.formulario label {
+  font-size: 0.6em;
+  font-weight: 100;
+  display: block;
+  margin-bottom: 0.4em;
+}
+.dPersonales {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.nombre {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5em;
+}
+.apeOne {
+  margin-right: 0.5em;
+}
+.apeTwo {
+  margin-right: 0.5em;
+}
+.datos {
+  display: flex;
+  flex-direction: row;
+}
+.email {
+  margin-right: 0.5em;
+}
+.concesionario {
+  display: flex;
+  flex-direction: row;
+}
+.prov {
+  margin-right: 0.5em;
+}
+.terminos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.terminos input {
+  margin-right: 0.4em;
+}
+
+.terminos label {
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+}
+.terminos button {
+  color: rgb(54, 152, 209);
+  padding: 0.5em 1em;
+}
