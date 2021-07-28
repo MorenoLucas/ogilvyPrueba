@@ -15,7 +15,7 @@
     </div>
     <div class="formulario">
       <h3 class="titulo">¿Qué modelo quieres probar?</h3>
-      <form action="">
+      <form action="" [formGroup]="formulario">
         <label for="">Modelo Principal* </label
         ><select>
           <option>Multivan</option>
@@ -29,8 +29,13 @@
         </select>
         <div class="dPersonales">
           <div class="nombre">
-            <label for="">Nombre* </label>
-            <input type="text" name="nombre" />
+            <label for="nombreControl">Nombre* </label>
+            <input
+              type="text"
+              name="nombre"
+              #nombreControl
+              formControlName="nombre"
+            />
           </div>
           <div class="apeOne">
             <label for=""> 1er Apellido* </label>
@@ -48,7 +53,11 @@
           </div>
           <div class="movil">
             <label for="">Movil* </label>
-            <input type="text" name="telefono" />
+            <input
+              type="text"
+              name="telefono"
+              onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+            />
           </div>
         </div>
         <h3 class="titulo">Escoge tu concesionario</h3>
