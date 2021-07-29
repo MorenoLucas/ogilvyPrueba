@@ -72,6 +72,12 @@ export class FormComponent implements OnInit {
   enviar() {
     //se guardan los datos en base de datos de firebase
     const data = this.formulario.getRawValue();
-    this.db.collection('informacion').add(data);
+    this.db
+      .collection('informacion')
+      .add(data)
+      .finally(() => {
+        alert('Formulario Enviado con Exito');
+        window.location.reload();
+      });
   }
 }
