@@ -15,18 +15,40 @@
     </div>
     <div class="formulario">
       <h3 class="titulo">¿Qué modelo quieres probar?</h3>
-      <form action="" [formGroup]="formulario">
+      <form action="" [formGroup]="formulario" novalidate>
         <label for="">Modelo Principal* </label
         ><select id="tipo" formControlName="tipoAuto">
+          <option value="">Seleccionar...</option>
           <option value="Multivan">Multivan</option>
           <option value="Caravalle">Caravelle</option>
         </select>
+        <p
+          class="error"
+          *ngIf="
+            formulario.controls.tipoAuto.errors &&
+            formulario.controls.tipoAuto.touched
+          "
+        >
+          El campo es obligatorio
+        </p>
+
         <h3 class="titulo">¿Tus datos de contacto son?</h3>
         <label for="">Trato* </label
         ><select formControlName="trato">
+          <option value="">Seleccionar...</option>
+
           <option value="Sr">Sr</option>
           <option value="Sr">Sra</option>
         </select>
+        <p
+          class="error"
+          *ngIf="
+            formulario.controls.trato.errors &&
+            formulario.controls.trato.touched
+          "
+        >
+          El campo es obligatorio
+        </p>
         <div class="dPersonales">
           <div class="nombre">
             <label for="nombreControl">Nombre* </label>
@@ -36,10 +58,28 @@
               #nombreControl
               formControlName="nombre"
             />
+            <p
+              class="error"
+              *ngIf="
+                formulario.controls.nombre.errors &&
+                formulario.controls.nombre.touched
+              "
+            >
+              El campo es obligatorio
+            </p>
           </div>
           <div class="apeOne">
             <label for=""> 1er Apellido* </label>
             <input type="text" name="apellido" formControlName="apellido" />
+            <p
+              class="error"
+              *ngIf="
+                formulario.controls.apellido.errors &&
+                formulario.controls.apellido.touched
+              "
+            >
+              El campo es obligatorio
+            </p>
           </div>
           <div class="apeTwo">
             <label for=""> 2do Apellido </label>
@@ -50,6 +90,15 @@
           <div class="email">
             <label for="">E-mail* </label>
             <input type="email" name="email" formControlName="email" />
+            <p
+              class="error"
+              *ngIf="
+                formulario.controls.email.errors &&
+                formulario.controls.email.touched
+              "
+            >
+              El campo es obligatorio
+            </p>
           </div>
           <div class="movil">
             <label for="">Movil* </label>
@@ -59,6 +108,15 @@
               formControlName="movil"
               onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
             />
+            <p
+              class="error"
+              *ngIf="
+                formulario.controls.movil.errors &&
+                formulario.controls.movil.touched
+              "
+            >
+              El campo es obligatorio
+            </p>
           </div>
         </div>
         <h3 class="titulo">Escoge tu concesionario</h3>
@@ -74,6 +132,15 @@
                 {{ p.provincia }}
               </option>
             </select>
+            <p
+              class="error"
+              *ngIf="
+                formulario.controls.provincia.errors &&
+                formulario.controls.provincia.touched
+              "
+            >
+              El campo es obligatorio
+            </p>
           </div>
           <div class="cons">
             <label for="">Concesión* </label>
@@ -85,6 +152,15 @@
                 {{ c }}
               </option>
             </select>
+            <p
+              class="error"
+              *ngIf="
+                formulario.controls.concesion.errors &&
+                formulario.controls.concesion.touched
+              "
+            >
+              El campo es obligatorio
+            </p>
           </div>
         </div>
         <div class="terminos">

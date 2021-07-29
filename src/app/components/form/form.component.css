@@ -91,7 +91,12 @@ img :nth-child(2) {
   color: rgb(54, 152, 209);
   padding: 0.5em 1em;
 }
-
+.error {
+  color: red;
+  font-weight: 100;
+  font-size: 0.5em;
+  margin-top: 0;
+}
 /* Móviles de 576px o menos */
 @media (max-width: 768.98px) {
   .formulario {
