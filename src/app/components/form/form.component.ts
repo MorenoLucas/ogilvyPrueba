@@ -41,8 +41,25 @@ export class FormComponent implements OnInit {
       concesion: ['', Validators.required],
       terminos: ['', Validators.required],
     });
+    await this.db
+      .collection('concesionarios')
+      .valueChanges()
+      .subscribe((data) => {
+        this.dataBase = data;
+      });
   }
 
+  async ShowConcesion() {
+    this.db
+      .collection('concesionarios')
+      .doc(this.selectProv)
+      .valueChanges()
+      .subscribe((c) => {
+        console.log(c);
+        let prov = c;
+        this.concesionarios = prov;
+      });
+  }
   enviar() {
     //se guardan los datos en base de datos de firebase
     const data = this.formulario.getRawValue();

@@ -65,14 +65,25 @@
         <div class="concesionario">
           <div class="prov">
             <label for="">Provincia* </label>
-            <select formControlName="provincia" [(ngModel)]="selectProv">
-              <option value="Almeria">Almeria</option>
+            <select
+              formControlName="provincia"
+              [(ngModel)]="selectProv"
+              (change)="ShowConcesion()"
+            >
+              <option value="{{ p.provincia }}" *ngFor="let p of dataBase">
+                {{ p.provincia }}
+              </option>
             </select>
           </div>
           <div class="cons">
             <label for="">Concesión* </label>
             <select formControlName="concesion">
-              <option value="a">a</option>
+              <option
+                value="{{ c }}"
+                *ngFor="let c of concesionarios.concesion"
+              >
+                {{ c }}
+              </option>
             </select>
           </div>
         </div>
