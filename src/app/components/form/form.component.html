@@ -128,6 +128,8 @@
               [(ngModel)]="selectProv"
               (change)="ShowConcesion()"
             >
+              <option value="">Seleccionar...</option>
+
               <option value="{{ p.provincia }}" *ngFor="let p of dataBase">
                 {{ p.provincia }}
               </option>
@@ -144,7 +146,12 @@
           </div>
           <div class="cons">
             <label for="">Concesión* </label>
-            <select formControlName="concesion">
+            <select
+              formControlName="concesion"
+              [disabled]="formulario.controls.provincia.invalid"
+            >
+              <option value="">Seleccionar...</option>
+
               <option
                 value="{{ c }}"
                 *ngFor="let c of concesionarios.concesion"
@@ -166,7 +173,18 @@
         <div class="terminos">
           <input type="checkbox" value="Enviar" formControlName="terminos" />
           <label for="">He leido y aceotadi la Política de Privacidad</label>
-          <button (click)="enviar()">Enviar</button>
+          <button (click)="enviar()" [disabled]="formulario.invalid">
+            Enviar
+          </button>
+          <p
+            class="error"
+            *ngIf="
+              formulario.controls.concesion.errors &&
+              formulario.controls.concesion.touched
+            "
+          >
+            El campo es obligatorio
+          </p>
         </div>
       </form>
     </div>

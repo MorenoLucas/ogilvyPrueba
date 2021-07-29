@@ -39,7 +39,7 @@ export class FormComponent implements OnInit {
       ],
       provincia: ['', Validators.required],
       concesion: ['', Validators.required],
-      terminos: ['', Validators.required],
+      terminos: ['', Validators.required, Validators.requiredTrue],
     });
     await this.db
       .collection('concesionarios')

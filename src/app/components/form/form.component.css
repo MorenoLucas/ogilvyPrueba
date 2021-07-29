@@ -100,15 +100,21 @@ img :nth-child(2) {
 /* Móviles de 576px o menos */
 @media (max-width: 768.98px) {
   .formulario {
-    width: auto;
+    width: 100vw;
   }
   .dPersonales {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    margin-bottom: 1em;
+  }
+  .dPersonales .nombre {
+    width: 31vw;
   }
   .datos {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1em;
   }
   .cons {
     display: flex;
@@ -119,5 +125,8 @@ img :nth-child(2) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .concesionario {
+    width: 100vw;
   }
 }
