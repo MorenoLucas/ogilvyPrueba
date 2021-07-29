@@ -21,8 +21,24 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = this.fb.group({
+      tipoAuto: ['', Validators.required],
+      trato: ['', Validators.required],
       nombre: ['', Validators.required],
+      apellido: ['', Validators.required],
+      apellido2: [''],
+      email: ['', Validators.required],
+      movil: [
+        '',
+        Validators.required,
+        Validators.pattern('^(0|6|7|9)[0-9]{9}$'),
+      ],
+      provincia: ['', Validators.required],
+      concesion: ['', Validators.required],
+      terminos: ['', Validators.required],
     });
-    console.log(this.formulario.getRawValue);
+  }
+
+  enviar(): void {
+    console.log(this.formulario.value);
   }
 }

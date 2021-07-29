@@ -17,15 +17,15 @@
       <h3 class="titulo">¿Qué modelo quieres probar?</h3>
       <form action="" [formGroup]="formulario">
         <label for="">Modelo Principal* </label
-        ><select>
-          <option>Multivan</option>
-          <option>Caravelle</option>
+        ><select id="tipo" formControlName="tipoAuto">
+          <option value="Multivan">Multivan</option>
+          <option value="Caravalle">Caravelle</option>
         </select>
         <h3 class="titulo">¿Tus datos de contacto son?</h3>
         <label for="">Trato* </label
-        ><select>
-          <option>Sr</option>
-          <option>Sra</option>
+        ><select formControlName="trato">
+          <option value="Sr">Sr</option>
+          <option value="Sr">Sra</option>
         </select>
         <div class="dPersonales">
           <div class="nombre">
@@ -39,23 +39,24 @@
           </div>
           <div class="apeOne">
             <label for=""> 1er Apellido* </label>
-            <input type="text" name="apellido" />
+            <input type="text" name="apellido" formControlName="apellido" />
           </div>
           <div class="apeTwo">
             <label for=""> 2do Apellido </label>
-            <input type="text" name="apellido2" />
+            <input type="text" name="apellido2" formControlName="apellido2" />
           </div>
         </div>
         <div class="datos">
           <div class="email">
             <label for="">E-mail* </label>
-            <input type="email" name="email" />
+            <input type="email" name="email" formControlName="email" />
           </div>
           <div class="movil">
             <label for="">Movil* </label>
             <input
               type="text"
               name="telefono"
+              formControlName="movil"
               onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
             />
           </div>
@@ -64,21 +65,21 @@
         <div class="concesionario">
           <div class="prov">
             <label for="">Provincia* </label>
-            <select>
-              <option>Almería</option>
+            <select formControlName="provincia">
+              <option value="Almeria">Almería</option>
             </select>
           </div>
           <div class="cons">
             <label for="">Concesión* </label>
-            <select>
-              <option>A1</option>
+            <select formControlName="concesion">
+              <option value="a1">A1</option>
             </select>
           </div>
         </div>
         <div class="terminos">
-          <input type="checkbox" value="Enviar" />
+          <input type="checkbox" value="Enviar" formControlName="terminos" />
           <label for="">He leido y aceotadi la Política de Privacidad</label>
-          <button>Enviar</button>
+          <button (click)="enviar()">Enviar</button>
         </div>
       </form>
     </div>
