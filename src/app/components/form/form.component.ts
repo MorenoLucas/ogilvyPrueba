@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { DataBaseService } from 'src/app/services/data-base.service';
+import { RestService } from 'src/app/services/rest.service';
 
 @Component({
   selector: 'app-form',
@@ -20,9 +21,16 @@ export class FormComponent implements OnInit {
   provincias: any[] = [];
   concesionarios: any = [];
   selectProv: string = '';
-  //mostrar mensaje de error
-  // <p *ngIf="!contro.valid Y control.touched  Y control.errors?.required">No es valido</p>
-  constructor(private fb: FormBuilder, private db: AngularFirestore) {}
+
+  constructor(
+    private fb: FormBuilder,
+    private db: AngularFirestore,
+    private rest: RestService
+  ) {
+    this.rest.get().subscribe((data) => {
+      console.log(data);
+    });
+  }
 
   async ngOnInit() {
     this.formulario = this.fb.group({

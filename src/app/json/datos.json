@@ -1,0 +1,36 @@
+{
+  "Datos": [
+    {
+      "provincia": "Alava",
+      "concesion": ["CIARSA (Alto de Armentia, 4 - Vitoria)"]
+    },
+
+    {
+      "provincia": "LLeida",
+      "concesion": [
+        "AUTODALSER DALMAU, S.L. (P.I. El Segre c/. Josep Baró i Travé, 117 bis - Lleida)",
+        "SERVISIMÓ, S.L. (Avda. Barcelona, 19 - Tárrega)",
+        "SERVISIMÓ, S.L. (Avda. Europa, Polígono Industrial Goltparc - Golmes Mollerusa)"
+      ]
+    },
+    {
+      "provincia": "Madrid",
+      "concesion": [
+        "ARDASA 2.000, S.A. (Avda. Carlos Sainz, 39-41 - Leganés)",
+        "ARDASA 2.000, S.A. (C/ Almendro, no 8 - Fuenlabrada)",
+        "COMATRA VEHIC. COMERCIALES, S.L. (C. Eratostenes, 4, Polígono Industrial El Lomo - Getafe)",
+        "F. TOME, S.A.. (C. Tauro, 27 - Madrid)",
+        "MOTOR GÓMEZ VILLALBA, S.A. (Av. Juan Carlos I, 24 - Collado Villalba)",
+        "SEALCO MOTOR, S.A.. (Ctra. S. M.Valdeiglesias, n.32 - Alcorcón)",
+        "VOLKSWAGEN MADRID, S.A. (C/ De Sofía, 18 - Madrid)"
+      ]
+    },
+    {
+      "provincia": "Valencia",
+      "concesion": [
+        "LEVANTE WAGEN, S.A. (Avda. Cid, 152 - Valencia)",
+        "ALLERS XÀTIVA, S.A. (C. Llosa de Ranes, 5 Polig. C, s/n - Xàtiva)"
+      ]
+    }
+  ]
+}
