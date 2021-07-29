@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class RestService {
   constructor(private http: HttpClient) {}
   url = 'https://my-json-server.typicode.com/typicode/demo/posts';
+  //obtenemos los datos de la api
   get() {
     return this.http.get(this.url);
   }

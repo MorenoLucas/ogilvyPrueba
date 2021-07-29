@@ -49,6 +49,7 @@ export class FormComponent implements OnInit {
       concesion: ['', Validators.required],
       terminos: ['', Validators.required, Validators.requiredTrue],
     });
+    //cogemos de los datos de la base de datos
     await this.db
       .collection('concesionarios')
       .valueChanges()
@@ -56,8 +57,8 @@ export class FormComponent implements OnInit {
         this.dataBase = data;
       });
   }
-
-  async ShowConcesion() {
+  //Cuando se selecciona una provincia muestra los concesionarios correspondients
+  ShowConcesion() {
     this.db
       .collection('concesionarios')
       .doc(this.selectProv)
