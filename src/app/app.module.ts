@@ -10,6 +10,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.prod';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent, FormComponent],
   imports: [
@@ -19,6 +21,7 @@ import { environment } from '../environments/environment.prod';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.config),
     AngularFirestoreModule,
+    HttpClientModule,
   ], // firestore],
   providers: [],
   bootstrap: [AppComponent],

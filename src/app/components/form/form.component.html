@@ -65,14 +65,14 @@
         <div class="concesionario">
           <div class="prov">
             <label for="">Provincia* </label>
-            <select formControlName="provincia">
-              <option value="Almeria">Almería</option>
+            <select formControlName="provincia" [(ngModel)]="selectProv">
+              <option value="Almeria">Almeria</option>
             </select>
           </div>
           <div class="cons">
             <label for="">Concesión* </label>
             <select formControlName="concesion">
-              <option value="a1">A1</option>
+              <option value="a">a</option>
             </select>
           </div>
         </div>
